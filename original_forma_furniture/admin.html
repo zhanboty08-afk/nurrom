@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="referrer" content="no-referrer" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' https: data: blob:; connect-src 'self' https://*.supabase.co wss://*.supabase.co; form-action 'self'"
+    />
+    <title>NURROOM — Панель управления заказами и каталогом</title>
+    <link rel="stylesheet" href="assets/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body class="bg-body-tertiary">
+    <div id="root">
+      <div class="d-flex align-items-center justify-content-center vh-100">
+        <div class="text-center">
+          <div class="spinner-border text-primary mb-3" role="status">
+            <span class="visually-hidden">Загрузка...</span>
+          </div>
+          <div class="text-muted small">Загрузка панели управления NURROOM...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Local browser libraries; the admin shell must not depend on a CDN. -->
+    <script defer src="admin-bootstrap.js"></script>
+    <script defer src="assets/vendor/supabase.min.js"></script>
+    <script defer src="assets/vendor/bootstrap.bundle.min.js"></script>
+    <script defer src="assets/vendor/react.production.min.js"></script>
+    <script defer src="assets/vendor/react-dom.production.min.js"></script>
+    <script defer src="assets/vendor/htm.umd.js"></script>
+
+    <!-- Application Backend & State Scripts -->
+    <script defer src="supabase.js"></script>
+    <script defer src="store.js"></script>
+    <script defer src="admin.js"></script>
+  </body>
+</html>
